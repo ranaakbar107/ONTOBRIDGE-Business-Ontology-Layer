@@ -1,0 +1,6 @@
+# relationship points to an entity that does not exist
+entities:
+  Customer:
+    properties: {id: string}
+relationships:
+  places: {from: Customer, to: Ordr, cardinality: one-to-many}

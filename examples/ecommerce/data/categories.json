@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "id": "CAT1",
+      "name": "Electronics"
+    },
+    {
+      "id": "CAT2",
+      "name": "Books"
+    },
+    {
+      "id": "CAT3",
+      "name": "Home & Kitchen"
+    },
+    {
+      "id": "CAT4",
+      "name": "Sports"
+    }
+  ]
+}

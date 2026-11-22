@@ -1,0 +1,6 @@
+entities:
+  Order:
+    properties: {id: string, amount: float}
+metrics:
+  revenue:
+    definition: {entity: Sale, aggregate: sum, field: amount}

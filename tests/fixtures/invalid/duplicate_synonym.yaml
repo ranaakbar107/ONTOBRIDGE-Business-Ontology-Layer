@@ -1,0 +1,8 @@
+# the same word cannot mean two concepts
+entities:
+  Customer:
+    synonyms: [client]
+    properties: {id: string}
+  Supplier:
+    synonyms: [client]
+    properties: {id: string}

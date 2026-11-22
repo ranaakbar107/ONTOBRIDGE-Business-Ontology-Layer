@@ -1,0 +1,4 @@
+# "money" is not a supported type
+entities:
+  Order:
+    properties: {id: string, amount: money}

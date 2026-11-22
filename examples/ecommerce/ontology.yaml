@@ -1,0 +1,90 @@
+# E-commerce demo ontology for ontobridge.
+# Entities = business concepts, relationships = how they connect,
+# metrics = official business definitions, synonyms = words people actually use.
+
+name: ecommerce
+version: "1.0"
+description: A small online shop that sells products in categories to customers.
+
+entities:
+  Customer:
+    description: A person who buys products from the shop.
+    key: id
+    synonyms: [client, buyer, shopper]
+    properties:
+      id: {type: string, description: "Customer id, e.g. C001"}
+      name: {type: string, description: Full name}
+      email: {type: string, description: Contact email}
+      city: {type: string, required: false, description: City the customer lives in}
+      signup_date: {type: date, description: Day the customer created an account}
+
+  Order:
+    description: A purchase made by one customer. Revenue only counts paid orders.
+    key: id
+    synonyms: [purchase, transaction, sale order]
+    properties:
+      id: {type: string, description: "Order id, e.g. O001"}
+      order_date: {type: date, description: Day the order was placed}
+      amount: {type: float, description: Order total in USD}
+      status: {type: string, description: "One of: paid, pending, refunded, cancelled"}
+
+  Product:
+    description: Something the shop sells.
+    key: id
+    synonyms: [item, article, sku]
+    properties:
+      id: {type: string, description: "Product id, e.g. P001"}
+      name: {type: string, description: Product name}
+      price: {type: float, description: List price in USD}
+      in_stock: {type: boolean, description: Whether the product can be ordered now}
+
+  Category:
+    description: A group of related products.
+    key: id
+    synonyms: [department, product category]
+    properties:
+      id: {type: string, description: "Category id, e.g. CAT1"}
+      name: {type: string, description: Category name}
+
+relationships:
+  places:
+    from: Customer
+    to: Order
+    cardinality: one-to-many
+    description: A customer places orders; every order belongs to exactly one customer.
+    synonyms: [placed, ordered]
+
+  contains:
+    from: Order
+    to: Product
+    cardinality: many-to-many
+    description: An order contains one or more products.
+    synonyms: [includes, line item]
+
+  belongs_to:
+    from: Product
+    to: Category
+    cardinality: many-to-one
+    description: Each product belongs to one category.
+    synonyms: [categorized as]
+
+metrics:
+  revenue:
+    description: Total amount of paid orders. Pending, refunded and cancelled orders do not count.
+    synonyms: [sales, income, turnover]
+    definition: {entity: Order, aggregate: sum, field: amount, filter: {status: paid}}
+
+  order_count:
+    description: Number of orders of any status.
+    synonyms: [orders placed, number of orders]
+    definition: {entity: Order, aggregate: count}
+
+  average_order_value:
+    description: Average amount of a paid order.
+    synonyms: [aov, average basket]
+    definition: {entity: Order, aggregate: avg, field: amount, filter: {status: paid}}
+
+  refunded_amount:
+    description: Total amount of refunded orders.
+    synonyms: [refunds]
+    definition: {entity: Order, aggregate: sum, field: amount, filter: {status: refunded}}

@@ -1,0 +1,5 @@
+# key property is not declared
+entities:
+  Customer:
+    key: customer_id
+    properties: {id: string, name: string}

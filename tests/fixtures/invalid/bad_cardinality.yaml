@@ -1,0 +1,8 @@
+# cardinality value is not allowed
+entities:
+  Customer:
+    properties: {id: string}
+  Order:
+    properties: {id: string}
+relationships:
+  places: {from: Customer, to: Order, cardinality: lots}

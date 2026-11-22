@@ -1,0 +1,11 @@
+id,name,email,city,signup_date
+C001,Ali Khan,ali.khan@example.com,Lahore,2025-01-05
+C002,Sara Ahmed,sara.ahmed@example.com,Karachi,2025-01-22
+C003,John Smith,john.smith@example.com,London,2025-02-08
+C004,Maria Garcia,maria.garcia@example.com,Madrid,2025-02-25
+C005,Chen Wei,chen.wei@example.com,Shanghai,2025-03-14
+C006,Fatima Noor,fatima.noor@example.com,Islamabad,2025-03-31
+C007,Liam Brown,liam.brown@example.com,Dublin,2025-04-17
+C008,Aisha Malik,aisha.malik@example.com,,2025-05-04
+C009,Noah Wilson,noah.wilson@example.com,Toronto,2025-05-21
+C010,Hina Raza,hina.raza@example.com,Lahore,2025-06-07

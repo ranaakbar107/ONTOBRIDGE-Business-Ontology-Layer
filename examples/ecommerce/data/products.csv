@@ -1,0 +1,16 @@
+id,name,price,in_stock,category_id
+P001,Wireless Mouse,25.00,true,CAT1
+P002,Mechanical Keyboard,89.00,true,CAT1
+P003,USB-C Charger,19.50,true,CAT1
+P004,Noise Cancelling Headphones,199.00,false,CAT1
+P005,Python Crash Course,35.00,true,CAT2
+P006,Clean Code,42.00,true,CAT2
+P007,Designing Data-Intensive Applications,48.00,true,CAT2
+P008,Chef Knife,60.00,true,CAT3
+P009,French Press,30.00,true,CAT3
+P010,Non-stick Pan,45.00,true,CAT3
+P011,Yoga Mat,28.00,true,CAT4
+P012,Running Shoes,120.00,true,CAT4
+P013,Water Bottle,15.00,true,CAT4
+P014,Cricket Bat,75.00,false,CAT4
+P015,Desk Lamp,38.00,true,CAT3

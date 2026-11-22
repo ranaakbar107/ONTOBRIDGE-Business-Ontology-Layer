@@ -1,0 +1,3 @@
+entities:
+  Customer:
+    properties: {id: string

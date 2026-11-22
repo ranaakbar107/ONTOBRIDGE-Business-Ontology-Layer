@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ontobridge": {
+      "command": "/ABSOLUTE/PATH/ontobridge/.venv/bin/ontobridge",
+      "args": [
+        "--ontology",
+        "/ABSOLUTE/PATH/ontobridge/examples/ecommerce/ontology.yaml",
+        "--mapping",
+        "/ABSOLUTE/PATH/ontobridge/examples/ecommerce/mapping.yaml"
+      ]
+    }
+  }
+}

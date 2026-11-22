@@ -1,0 +1,28 @@
+# Where the e-commerce data lives and how file columns map to the ontology.
+data_dir: data
+
+entities:
+  Customer:
+    source: customers.csv
+  Order:
+    source: orders.csv
+    columns: {order_id: id}          # file column -> ontology property
+  Product:
+    source: products.csv
+  Category:
+    source: categories.json          # JSON works the same way
+    path: categories                 # the list lives under this key
+
+relationships:
+  places:
+    source: orders.csv
+    from: customer_id                # key of the Customer
+    to: order_id                     # key of the Order
+  contains:
+    source: order_items.csv
+    from: order_id
+    to: product_id
+  belongs_to:
+    source: products.csv
+    from: id
+    to: category_id

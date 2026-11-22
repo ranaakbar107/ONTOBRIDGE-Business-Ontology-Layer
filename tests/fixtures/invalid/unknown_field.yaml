@@ -1,0 +1,4 @@
+# typo: "propertes" instead of "properties"
+entities:
+  Customer:
+    propertes: {id: string}

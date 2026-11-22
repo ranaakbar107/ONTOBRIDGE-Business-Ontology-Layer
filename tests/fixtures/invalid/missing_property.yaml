@@ -1,0 +1,7 @@
+# metric sums a property the entity does not have
+entities:
+  Order:
+    properties: {id: string, status: string}
+metrics:
+  revenue:
+    definition: {entity: Order, aggregate: sum, field: amount, filter: {status: paid}}
