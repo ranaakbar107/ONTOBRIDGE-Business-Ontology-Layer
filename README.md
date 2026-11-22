@@ -1,6 +1,6 @@
 # ontobridge
 
-[![CI](https://github.com/<your-github-username>/ontobridge/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-github-username>/ontobridge/actions/workflows/ci.yml)
+[![CI](https://github.com/ranaakbar107/ONTOBRIDGE-Business-Ontology-Layer/actions/workflows/ci.yml/badge.svg)](https://github.com/ranaakbar107/ONTOBRIDGE-Business-Ontology-Layer/actions/workflows/ci.yml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -21,7 +21,7 @@ can check whether the ontology covers the question at all before answering.
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-github-username>/ontobridge.git && cd ontobridge
+git clone https://github.com/ranaakbar107/ONTOBRIDGE-Business-Ontology-Layer.git && cd ONTOBRIDGE-Business-Ontology-Layer
 # 2. Create a virtual environment (Python 3.12+)
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 # 3. Install
